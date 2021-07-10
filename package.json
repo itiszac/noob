@@ -6,9 +6,12 @@
   "scripts": {
     "build": "webpack --config webpack.prod.config.js",
     "dev:webpack": "webpack serve --config webpack.dev.config.js",
+    "lint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\"",
     "typecheck": "tsc --pretty --noEmit",
     "prettier": "prettier --write \"./src/**/*.{ts,tsx}\"",
-    "prettier:check": "prettier --check \"./src/**/*.{ts,tsx}\""
+    "prettier:check": "prettier --check \"./src/**/*.{ts,tsx}\"",
+    "test-all": "npm run prettier:check && npm run lint && npm run typecheck && npm run build",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -45,11 +48,17 @@
     "eslint-webpack-plugin": "^2.5.4",
     "fork-ts-checker-webpack-plugin": "^6.2.12",
     "html-webpack-plugin": "^5.3.2",
+    "husky": ">=6",
+    "lint-staged": ">=10",
     "prettier": "^2.3.2",
     "ts-node": "^10.1.0",
     "typescript": "^4.3.5",
     "webpack": "^5.44.0",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
