@@ -1,6 +1,6 @@
 # Noob
 
-Noob is a project scaffold that attempts to give a noobs like myself the ability to quickly start a frontend client with all of the necessary configurations setup.
+Noob is a project scaffold that attempts to give noobs like myself the ability to quickly start a frontend client with all of the necessary configurations setup.
 
 ## Getting Started
 
