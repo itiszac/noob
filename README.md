@@ -41,7 +41,7 @@ Quality of development tools and libraries:
 
 - [Prettier](https://prettier.io/): A opinionated code formatter which supports JSX/Typescript.
 - [ESLint](https://eslint.org/): Static code analyzer to quickly find problems. Also gives us the ability to enforce google coding style standard.
-- [Husky](https://typicode.github.io/husky/): A tool to make git hooks easy, this improves your commits, and helps run test pre-commit!
+- [Husky](https://typicode.github.io/husky/): A tool to make git hooks easy, this improves your commits, and helps run tests pre-commit!
 
 ## Out of the Box Features
 
@@ -54,3 +54,4 @@ Quality of development tools and libraries:
 - Add testing with Jest
 - Auto Generate components/tests
 - Example protected pages
+- Add helm chart
