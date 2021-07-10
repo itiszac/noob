@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  react:
+    container_name: '${DOMAIN_NAME}-react'
+    restart: unless-stopped
+    image: node
+    command: npm run dev:webpack
+    ports:
+      - 4000:4000
+    volumes:
+      - .:/srv/react:rw
+    working_dir: /srv/react
+    env_file:
+      - .env
+    # container_name: '${DOMAIN_NAME}-react'
+    # restart: unless-stopped
+    # build: .
+    # volumes:
+    #   - /usr/src/app/node_modules
+    #   - .:/usr/src/app
+    # ports:
+    #   - 4000:4000
+    # command: 'npm run dev:webpack'
