@@ -28,7 +28,7 @@ jobs:
             ${{ runner.OS }}-node-
             ${{ runner.OS }}-
       - name: Install depenencies
-        run: npm ci
+        run: npm install
 
       - name: Create local environment
         run: cp .env.example .env
