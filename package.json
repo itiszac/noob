@@ -12,7 +12,8 @@
     "typecheck": "tsc --pretty --noEmit",
     "prettier": "prettier --write \"./src/**/*.{ts,tsx}\"",
     "prettier:check": "prettier --check \"./src/**/*.{ts,tsx}\"",
-    "test": "jest --watchAll",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
     "test-all": "npm run prettier:check && npm run lint && npm run typecheck && npm run build",
     "prepare": "husky install"
   },
@@ -32,9 +33,11 @@
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.14.5",
     "@babel/runtime": "^7.14.6",
-    "@testing-library/react": "^12.0.0",
+    "@types/enzyme": "^3.10.9",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/fork-ts-checker-webpack-plugin": "^0.4.5",
     "@types/html-webpack-plugin": "^3.2.6",
+    "@types/jest": "^26.0.24",
     "@types/node": "^16.3.1",
     "@types/prettier": "^2.3.2",
     "@types/react": "^17.0.14",
@@ -46,6 +49,9 @@
     "@typescript-eslint/parser": "^4.28.2",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
     "eslint": "^7.30.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.3.0",
@@ -58,6 +64,8 @@
     "jest": "^27.0.6",
     "lint-staged": ">=10",
     "prettier": "^2.3.2",
+    "raf": "^3.4.1",
+    "ts-jest": "^27.0.4",
     "ts-node": "^10.1.0",
     "typescript": "^4.3.5",
     "webpack": "^5.44.0",
@@ -67,5 +75,24 @@
   "lint-staged": {
     "*.js": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "setupFiles": [
+      "raf/polyfill"
+    ],
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$",
+    "setupTestFrameworkScriptFile": "<rootDir>__mocks__/setupEnzyme.ts",
+    "snapshotSerializers": [
+      "enzyme-to-json"
+    ],
+    "testEnvironment": "jsdom"
   }
 }

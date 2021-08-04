@@ -24,6 +24,12 @@ npm run typecheck ||
     false;
 )
 
+npm run test ||
+(
+    echo 'Tests Failed. Make the changes required above before recommitting.'
+    false;
+)
+
 # If everything passes... Now we can commit
 echo 'Code has passed all tests. Attempting to build project.'
 
