@@ -28,7 +28,7 @@ jobs:
             ${{ runner.OS }}-node-
             ${{ runner.OS }}-
       - name: Install depenencies
-        run: npm install
+        run: npm ci
 
       - name: Create local environment
         run: cp .env.example .env
@@ -43,7 +43,7 @@ jobs:
         run: npm run typecheck
 
       - name: Test
-        run: npm test
+        run: npm run test
 
       - name: Application build
         run: npm run build

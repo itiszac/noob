@@ -19,7 +19,7 @@ FROM node AS base
 FROM base AS deps
 WORKDIR /deps
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 
 FROM base AS builder
 WORKDIR /builder
@@ -33,6 +33,7 @@ ENV PORT 4000
 
 COPY --from=builder /builder/node_modules ./node_modules
 COPY --from=builder /builder/package.json ./package.json
+COPY --from=builder /builder/build ./build
 
 EXPOSE ${PORT}
-CMD [ "npm", "start" ]
+CMD [ "npm", "run", "start" ]
