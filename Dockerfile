@@ -19,7 +19,7 @@ FROM node AS base
 FROM base AS deps
 WORKDIR /deps
 COPY package*.json ./
-RUN npm ci
+RUN npm install
 
 FROM base AS builder
 WORKDIR /builder
@@ -31,7 +31,6 @@ FROM base AS runner
 ENV NODE_ENV production
 ENV PORT 4000
 
-COPY --from=builder /builder/public ./public
 COPY --from=builder /builder/node_modules ./node_modules
 COPY --from=builder /builder/package.json ./package.json
 
