@@ -1,6 +1,6 @@
 # Noob
 
-Noob is a project scaffold that attempts to give noobs like myself the ability to quickly start a frontend client with all of the necessary configurations setup.
+Noob is a project scaffold that attempts to give noobs like myself the ability to quickly start a web ui with all of the necessary configurations and tooling already setup.
 
 ## Getting Started
 
@@ -11,8 +11,6 @@ Install the required dependencies:
 ```bash
 # with node package manager
 npm i
-# with yarn
-yarn
 ```
 
 Make a copy of the example environment variables file. The file by default isn't tracked on git.
@@ -26,8 +24,6 @@ Make sure you have both [Docker](https://www.docker.com/get-started) and [Docker
 ```bash
 # with npm
 npm run dev
-# with yarn
-yarn dev
 ```
 
 ## Technologies Included
@@ -42,16 +38,19 @@ Quality of development tools and libraries:
 - [Prettier](https://prettier.io/): A opinionated code formatter which supports JSX/Typescript.
 - [ESLint](https://eslint.org/): Static code analyzer to quickly find problems. Also gives us the ability to enforce google coding style standard.
 - [Husky](https://typicode.github.io/husky/): A tool to make git hooks easy, this improves your commits, and helps run tests pre-commit!
+- [Jest](https://jestjs.io/): A Javascript testing framework focused on simplicity.
+- [Enzyme](https://enzymejs.github.io/enzyme/): A Javascript testing utility for React.
 
 ## Out of the Box Features
 
-- Production ready Dockerfile
-- Docker Compose for easy local development and hot reloading
-- Trunk based development
+- Docker Compose setup for local development
+- Testing
+- Git Hooks
 
 ## Coming soon
 
-- Add testing with Jest
-- Auto Generate components/tests
+- Production ready Dockerfile
+- Auto Generate components/tests with Plop
+- Example implementation of Context API
 - Example protected pages
-- Add helm chart
+- Helm chart
