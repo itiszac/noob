@@ -40,6 +40,7 @@ Quality of development tools and libraries:
 - [Husky](https://typicode.github.io/husky/): A tool to make git hooks easy, this improves your commits, and helps run tests pre-commit!
 - [Jest](https://jestjs.io/): A Javascript testing framework focused on simplicity.
 - [Enzyme](https://enzymejs.github.io/enzyme/): A Javascript testing utility for React.
+- [Plop](https://plopjs.com/): A tool used to generate code using a handlebars template.
 
 ## Out of the Box Features
 
