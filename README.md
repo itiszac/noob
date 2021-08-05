@@ -44,6 +44,7 @@ Quality of development tools and libraries:
 ## Out of the Box Features
 
 - Docker Compose setup for local development
+- Enforced code styling
 - Testing
 - Git Hooks
 

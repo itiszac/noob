@@ -15,7 +15,8 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "test-all": "npm run prettier:check && npm run lint && npm run typecheck && npm run test && npm run build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "generate": "plop --plopfile __generator__/index.js"
   },
   "keywords": [],
   "author": "Zachary Meyer",
@@ -43,8 +44,6 @@
     "@types/react": "^17.0.14",
     "@types/react-dom": "^17.0.9",
     "@types/react-router-dom": "^5.1.8",
-    "@types/webpack": "^5.28.0",
-    "@types/webpack-dev-server": "^3.11.5",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",
     "babel-loader": "^8.2.2",
@@ -63,6 +62,7 @@
     "husky": ">=6",
     "jest": "^27.0.6",
     "lint-staged": ">=10",
+    "plop": "^2.7.4",
     "prettier": "^2.3.2",
     "raf": "^3.4.1",
     "ts-jest": "^27.0.4",
@@ -71,6 +71,10 @@
     "webpack": "^5.44.0",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
+  },
+  "resolutions": {
+    "glob-parent": "5.1.2",
+    "@types/webpack": "^4.4.11"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
