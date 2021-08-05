@@ -47,11 +47,11 @@ Quality of development tools and libraries:
 - Enforced code styling
 - Testing
 - Git Hooks
+- Functional component generation
 
 ## Coming soon
 
 - Production ready Dockerfile
-- Auto Generate components/tests with Plop
 - Example implementation of Context API
 - Example protected pages
 - Helm chart
